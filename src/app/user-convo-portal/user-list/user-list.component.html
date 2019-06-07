@@ -1,7 +1,12 @@
 <button type="button" class="btn btn-primary">New Chat</button>
 <br><br>
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action">Employee I</a>
-  <a href="#" class="list-group-item list-group-item-action">Employee II<span class="badge badge-light float-right">4</span></a>
-  <a href="#" class="list-group-item list-group-item-action">employee III</a>
+  <app-users
+    *ngFor = " let users of activeUsers; let i = index "
+    [employee] = "users"
+    [index] = "i">
+  </app-users>
+<!--  <a href="#" class="list-group-item list-group-item-action">Employee I</a>-->
+<!--  <a href="#" class="list-group-item list-group-item-action">Employee II<span class="badge badge-light float-right">4</span></a>-->
+<!--  <a href="#" class="list-group-item list-group-item-action">employee III</a>-->
 </div>
